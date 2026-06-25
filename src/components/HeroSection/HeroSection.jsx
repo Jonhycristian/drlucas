@@ -8,9 +8,10 @@ export function HeroSection() {
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
-    <section className={styles.hero}>
-      <div className={styles.contentSide}>
-        <div className={styles.contentInner}>
+    <section className={styles.hero} id="inicio">
+      <div className={styles.overlay}></div>
+      <div className={`container ${styles.content}`}>
+        <div className={`${styles.glassCard} fade-in-up`}>
           <div className={styles.badge}>Atendimento Veterinário Premium</div>
           
           <h1 className={styles.title}>
@@ -29,9 +30,6 @@ export function HeroSection() {
             Agendar Consulta
           </a>
         </div>
-      </div>
-      <div className={styles.imageSide}>
-        {/* A imagem de fundo é aplicada pelo CSS nesta div */}
       </div>
     </section>
   );
