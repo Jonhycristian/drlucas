@@ -6,7 +6,7 @@
   height: 65px;
   background-color: #25d366; /* Cor Oficial do WhatsApp */
   color: #fff;
-  border-radius: 16px; /* Squircle (quadrado com cantos arredondados) */
+  border-radius: 50%; /* Volta a ser círculo perfeito */
   display: flex;
   align-items: center;
   justify-content: center;

@@ -43,8 +43,8 @@ export function PurposeSection() {
         
         <div className={styles.imageWrapper}>
           <img 
-            src="https://images.unsplash.com/photo-1576092762791-dd9e2220afa1?q=80&w=2070&auto=format&fit=crop" 
-            alt="Atendimento Veterinário" 
+            src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=2000&auto=format&fit=crop" 
+            alt="Atendimento Veterinário Premium" 
             className={styles.image}
           />
         </div>
