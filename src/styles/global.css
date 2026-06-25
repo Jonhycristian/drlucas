@@ -1,0 +1,123 @@
+:root {
+  /* Cores Base */
+  --primary-color: #0b4f4f; /* Verde Escuro (Saúde, Natureza) */
+  --primary-light: #167a7a;
+  --secondary-color: #f1b34e; /* Amarelo/Dourado (Atenção, Energia) */
+  --secondary-hover: #db9d38;
+  
+  /* Cores de Texto */
+  --text-dark: #1a1a1a;
+  --text-light: #f5f5f5;
+  --text-muted: #666666;
+  
+  /* Cores de Fundo */
+  --bg-light: #f9fbfb;
+  --bg-white: #ffffff;
+  --bg-dark: #1e1e1e;
+  
+  /* Tipografia */
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  /* Espaçamento */
+  --section-padding: 5rem 10%;
+  --section-padding-mobile: 4rem 5%;
+  
+  /* Bordas e Sombras */
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Botões Globais */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--bg-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-accent {
+  background-color: var(--secondary-color);
+  color: var(--text-dark);
+}
+
+.btn-accent:hover {
+  background-color: var(--secondary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Utilitários de Seção */
+section {
+  padding: var(--section-padding);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: var(--section-padding-mobile);
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+}

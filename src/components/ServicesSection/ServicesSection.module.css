@@ -1,0 +1,56 @@
+.services {
+  background-color: var(--primary-color);
+  color: var(--bg-white);
+}
+
+.subtitle {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.2rem;
+  margin-top: -2rem;
+  margin-bottom: 3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 2.5rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background-color: var(--bg-white);
+  color: var(--text-dark);
+  transform: translateY(-5px);
+}
+
+.iconWrapper {
+  color: var(--secondary-color);
+  margin-bottom: 1.5rem;
+}
+
+.card:hover .iconWrapper {
+  color: var(--primary-color);
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.cardDesc {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.card:hover .cardDesc {
+  color: var(--text-muted);
+}
