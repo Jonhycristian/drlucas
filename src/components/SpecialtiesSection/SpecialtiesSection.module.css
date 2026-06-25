@@ -9,78 +9,108 @@
 }
 
 .card {
-  background-color: var(--bg-white);
+  position: relative;
   border-radius: var(--radius-lg);
-  padding: 3rem 2rem;
+  overflow: hidden;
   box-shadow: var(--shadow-sm);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-top: 5px solid var(--primary-light);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  color: var(--bg-white);
+}
+
+.cardPets {
+  background-image: url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=2069&auto=format&fit=crop'); /* Cães/Gatos sorridentes */
 }
 
 .cardLarge {
-  border-top-color: var(--secondary-color);
+  background-image: url('https://images.unsplash.com/photo-1599422204732-73a7638d15a5?q=80&w=1974&auto=format&fit=crop'); /* Gado/Fazenda premium */
+}
+
+.cardOverlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, rgba(11, 25, 44, 0.7) 0%, rgba(11, 25, 44, 0.95) 100%);
+  z-index: 1;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 2;
+  padding: 3.5rem 2.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
 }
 
 .cardHeader {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .iconGroup {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  color: var(--primary-color);
+  gap: 1.5rem;
+  color: var(--secondary-color);
   margin-bottom: 1.5rem;
 }
 
-.cardLarge .iconGroup {
-  color: var(--secondary-hover);
-}
-
 .cardHeader h3 {
-  font-size: 1.75rem;
-  color: var(--text-dark);
-  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  color: var(--bg-white);
+  margin-bottom: 0.75rem;
 }
 
 .cardSubtitle {
-  color: var(--text-muted);
-  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.1rem;
+  line-height: 1.5;
 }
 
 .list {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.25rem;
+  margin-top: auto;
 }
 
 .list li {
   display: flex;
   align-items: flex-start;
-  gap: 0.75rem;
+  gap: 1rem;
   font-size: 1.05rem;
-  color: var(--text-dark);
+  color: var(--text-light);
+  line-height: 1.6;
 }
 
 .check {
-  color: var(--primary-color);
-  font-weight: bold;
+  color: var(--secondary-color);
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
-.cardLarge .check {
+.list li strong {
   color: var(--secondary-hover);
+  font-weight: 600;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .cardsContainer {
     grid-template-columns: 1fr;
+  }
+  .card {
+    min-height: auto;
+  }
+  .cardContent {
+    padding: 3rem 2rem;
   }
 }

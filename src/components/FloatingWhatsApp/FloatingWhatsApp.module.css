@@ -1,30 +1,47 @@
 .floatBtn {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 60px;
-  height: 60px;
-  background-color: #25d366; /* WhatsApp Official Color */
+  top: 50%; /* Alinhamento vertical central no desktop */
+  right: 40px;
+  transform: translateY(-50%); /* Centraliza perfeitamente no eixo Y */
+  width: 65px;
+  height: 65px;
+  background-color: #25d366; /* Cor Oficial do WhatsApp */
   color: #fff;
-  border-radius: 50%;
+  border-radius: 16px; /* Squircle (quadrado com cantos arredondados) */
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
   z-index: 1000;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
-.floatBtn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+.floatBtn.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.floatBtn.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-50%) scale(0.8); /* Efeito de encolher ao sumir */
+}
+
+.floatBtn.visible:hover {
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.5);
 }
 
 .icon {
   fill: currentColor;
 }
 
-/* Pulsing Animation */
+/* Animação de Pulso */
 .floatBtn::before {
   content: '';
   position: absolute;
@@ -42,16 +59,27 @@
     opacity: 0.6;
   }
   100% {
-    transform: scale(1.5);
+    transform: scale(1.4);
     opacity: 0;
   }
 }
 
 @media (max-width: 768px) {
   .floatBtn {
-    bottom: 20px;
-    right: 20px;
-    width: 55px;
-    height: 55px;
+    top: auto;
+    bottom: 25px;
+    right: 25px;
+    transform: none; /* Remove o translateY no mobile */
+    border-radius: 50%; /* Volta a ser círculo no mobile, padrão para telas pequenas */
+    width: 60px;
+    height: 60px;
+  }
+
+  .floatBtn.hidden {
+    transform: translateY(20px) scale(0.8); /* Muda o efeito de sumir para o eixo Y correto no mobile */
+  }
+
+  .floatBtn.visible:hover {
+    transform: scale(1.05); /* Hover simplificado no mobile */
   }
 }

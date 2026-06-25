@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './SpecialtiesSection.module.css';
-import { Dog, Cat, Tractor, Tent } from 'lucide-react';
+import { Dog, Cat, Tractor, Tent, CheckCircle2 } from 'lucide-react';
 
 export function SpecialtiesSection() {
   return (
@@ -10,59 +10,65 @@ export function SpecialtiesSection() {
         
         <div className={styles.cardsContainer}>
           {/* Card Pets */}
-          <div className={styles.card}>
-            <div className={styles.cardHeader}>
-              <div className={styles.iconGroup}>
-                <Dog size={32} />
-                <Cat size={32} />
+          <div className={`${styles.card} ${styles.cardPets}`}>
+            <div className={styles.cardOverlay}></div>
+            <div className={styles.cardContent}>
+              <div className={styles.cardHeader}>
+                <div className={styles.iconGroup}>
+                  <Dog size={36} />
+                  <Cat size={36} />
+                </div>
+                <h3>Para Pets (Cães e Gatos)</h3>
+                <p className={styles.cardSubtitle}>Conforto e segurança para quem você ama, no aconchego do seu lar.</p>
               </div>
-              <h3>Para Pets (Cães e Gatos)</h3>
-              <p className={styles.cardSubtitle}>Conforto e segurança para quem você ama.</p>
+              <ul className={styles.list}>
+                <li>
+                  <CheckCircle2 className={styles.check} size={20} />
+                  <span>Consultas domiciliares (menos estresse para o animal)</span>
+                </li>
+                <li>
+                  <CheckCircle2 className={styles.check} size={20} />
+                  <span>Esquema vacinal e medicina preventiva</span>
+                </li>
+                <li>
+                  <CheckCircle2 className={styles.check} size={20} />
+                  <span>Nutrição clínica especializada</span>
+                </li>
+              </ul>
             </div>
-            <ul className={styles.list}>
-              <li>
-                <span className={styles.check}>✓</span>
-                Consultas domiciliares (menos estresse para o animal)
-              </li>
-              <li>
-                <span className={styles.check}>✓</span>
-                Esquema vacinal e medicina preventiva
-              </li>
-              <li>
-                <span className={styles.check}>✓</span>
-                Nutrição clínica especializada
-              </li>
-            </ul>
           </div>
 
           {/* Card Grandes Animais */}
           <div className={`${styles.card} ${styles.cardLarge}`}>
-            <div className={styles.cardHeader}>
-              <div className={styles.iconGroup}>
-                <Tractor size={32} />
-                <Tent size={32} />
+            <div className={styles.cardOverlay}></div>
+            <div className={styles.cardContent}>
+              <div className={styles.cardHeader}>
+                <div className={styles.iconGroup}>
+                  <Tractor size={36} />
+                  <Tent size={36} />
+                </div>
+                <h3>Animais de Produção e Equinos</h3>
+                <p className={styles.cardSubtitle}>Foco em saúde do rebanho, manejo eficiente e alta performance a campo.</p>
               </div>
-              <h3>Animais de Produção e Equinos</h3>
-              <p className={styles.cardSubtitle}>Rendimento, saúde do rebanho e performance.</p>
+              <ul className={styles.list}>
+                <li>
+                  <CheckCircle2 className={styles.check} size={20} />
+                  <span><strong>Bovinos de Leite e Corte:</strong> Assistência técnica focada em produtividade.</span>
+                </li>
+                <li>
+                  <CheckCircle2 className={styles.check} size={20} />
+                  <span><strong>Equinos:</strong> Atendimento especializado para animais de esporte, trabalho ou lazer.</span>
+                </li>
+                <li>
+                  <CheckCircle2 className={styles.check} size={20} />
+                  <span>Manejo reprodutivo, nutricional e sanitário.</span>
+                </li>
+                <li>
+                  <CheckCircle2 className={styles.check} size={20} />
+                  <span>Atendimento emergencial a campo e necropsia veterinária.</span>
+                </li>
+              </ul>
             </div>
-            <ul className={styles.list}>
-              <li>
-                <span className={styles.check}>✓</span>
-                Assistência técnica a propriedades
-              </li>
-              <li>
-                <span className={styles.check}>✓</span>
-                Manejo reprodutivo e nutricional
-              </li>
-              <li>
-                <span className={styles.check}>✓</span>
-                Atendimento emergencial a campo
-              </li>
-              <li>
-                <span className={styles.check}>✓</span>
-                Necropsia veterinária
-              </li>
-            </ul>
           </div>
         </div>
       </div>

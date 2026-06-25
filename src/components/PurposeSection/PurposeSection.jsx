@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './PurposeSection.module.css';
-import { Target, ShieldCheck } from 'lucide-react';
+import { Target, ShieldCheck, Microscope, Clock } from 'lucide-react';
 
 export function PurposeSection() {
   return (
@@ -19,22 +19,31 @@ export function PurposeSection() {
           
           <div className={styles.stats}>
             <div className={styles.statBox}>
-              <Target size={40} className={styles.icon} />
+              <Target size={36} className={styles.icon} />
               <h4>Precisão</h4>
               <p>Diagnósticos assertivos baseados em evidências.</p>
             </div>
             <div className={styles.statBox}>
-              <ShieldCheck size={40} className={styles.icon} />
+              <ShieldCheck size={36} className={styles.icon} />
               <h4>Segurança</h4>
               <p>Protocolos de excelência para todas as espécies.</p>
+            </div>
+            <div className={styles.statBox}>
+              <Microscope size={36} className={styles.icon} />
+              <h4>Tecnologia</h4>
+              <p>Equipamentos modernos para suporte a campo.</p>
+            </div>
+            <div className={styles.statBox}>
+              <Clock size={36} className={styles.icon} />
+              <h4>Disponibilidade</h4>
+              <p>Suporte ágil em momentos críticos.</p>
             </div>
           </div>
         </div>
         
         <div className={styles.imageWrapper}>
-          {/* Placeholder for an image representing care/science */}
           <img 
-            src="https://images.unsplash.com/photo-1599422204732-73a7638d15a5?q=80&w=1974&auto=format&fit=crop" 
+            src="https://images.unsplash.com/photo-1576092762791-dd9e2220afa1?q=80&w=2070&auto=format&fit=crop" 
             alt="Atendimento Veterinário" 
             className={styles.image}
           />
