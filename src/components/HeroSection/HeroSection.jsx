@@ -9,9 +9,8 @@ export function HeroSection() {
 
   return (
     <section className={styles.hero}>
-      <div className={styles.overlay}></div>
-      <div className={`container ${styles.content}`}>
-        <div className={`${styles.glassCard} fade-in-up`}>
+      <div className={styles.contentSide}>
+        <div className={styles.contentInner}>
           <div className={styles.badge}>Atendimento Veterinário Premium</div>
           
           <h1 className={styles.title}>
@@ -30,6 +29,9 @@ export function HeroSection() {
             Agendar Consulta
           </a>
         </div>
+      </div>
+      <div className={styles.imageSide}>
+        {/* A imagem de fundo é aplicada pelo CSS nesta div */}
       </div>
     </section>
   );
