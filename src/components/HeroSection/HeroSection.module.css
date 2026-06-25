@@ -16,7 +16,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at center, rgba(11, 25, 44, 0.7) 0%, rgba(11, 25, 44, 0.95) 100%);
+  background: linear-gradient(135deg, rgba(11, 25, 44, 0.9) 0%, rgba(11, 25, 44, 0.5) 100%);
   z-index: 1;
 }
 
@@ -29,15 +29,15 @@
 }
 
 .glassCard {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-lg);
-  padding: 4rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  padding: 4.5rem;
   max-width: 850px;
   width: 100%; /* Garante responsividade */
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   text-align: center; /* Centraliza o texto dentro do card */
 }
 
