@@ -3,13 +3,11 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-image: url('https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?q=80&w=2070&auto=format&fit=crop'); /* Placeholder of a vet scenario or nature */
+  background-image: url('https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?q=80&w=2070&auto=format&fit=crop');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Parallax effect */
-  color: var(--bg-white);
-  padding-top: 80px; /* Space for a potential fixed header */
+  background-attachment: fixed;
+  padding-top: 80px;
 }
 
 .overlay {
@@ -18,66 +16,115 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to right, rgba(11, 79, 79, 0.9) 0%, rgba(11, 79, 79, 0.6) 100%);
+  /* Gradiente mais sofisticado: escuro nas bordas, ligeiramente mais claro no centro */
+  background: radial-gradient(circle at center, rgba(11, 25, 44, 0.7) 0%, rgba(11, 25, 44, 0.95) 100%);
   z-index: 1;
 }
 
 .content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
-  text-align: left;
+  width: 100%;
+}
+
+.glassCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 4rem;
+  max-width: 700px;
+  box-shadow: var(--shadow-lg);
+}
+
+.badge {
+  display: inline-block;
+  background-color: rgba(212, 175, 55, 0.15); /* Dourado com transparência */
+  color: var(--secondary-hover);
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(212, 175, 55, 0.3);
 }
 
 .title {
   font-size: 3.5rem;
-  font-weight: 800;
-  margin-bottom: 1.5rem;
+  font-weight: 300;
+  color: var(--bg-white);
+  margin-bottom: 0.5rem;
   letter-spacing: -1px;
+}
+
+.subtitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--bg-white);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
 }
 
 .highlight {
   color: var(--secondary-color);
+  display: block;
 }
 
-.subtitle {
-  font-size: 1.25rem;
-  margin-bottom: 2.5rem;
-  font-weight: 400;
-  opacity: 0.9;
-  max-width: 650px;
+.description {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 3rem;
+  line-height: 1.7;
+  max-width: 90%;
 }
 
 .ctaBtn {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  background-color: var(--secondary-color);
-  color: var(--text-dark);
-  font-size: 1.125rem;
+  background: linear-gradient(135deg, var(--secondary-color) 0%, #b8860b 100%);
+  color: var(--primary-color);
+  font-size: 1.1rem;
   padding: 1.25rem 2.5rem;
   border-radius: 50px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-gold);
 }
 
 .ctaBtn:hover {
-  background-color: var(--bg-white);
-  color: var(--primary-color);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4);
+  background: linear-gradient(135deg, var(--secondary-hover) 0%, var(--secondary-color) 100%);
 }
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 80vh;
+    min-height: 90vh;
+  }
+  .glassCard {
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .badge {
+    font-size: 0.75rem;
   }
   .title {
     font-size: 2.5rem;
   }
-  .content {
-    text-align: center;
+  .subtitle {
+    font-size: 1.8rem;
+  }
+  .description {
+    font-size: 1rem;
+    margin: 0 auto 2.5rem;
   }
   .ctaBtn {
     width: 100%;

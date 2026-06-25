@@ -1,32 +1,52 @@
 :root {
-  /* Cores Base */
-  --primary-color: #0b4f4f; /* Verde Escuro (Saúde, Natureza) */
-  --primary-light: #167a7a;
-  --secondary-color: #f1b34e; /* Amarelo/Dourado (Atenção, Energia) */
-  --secondary-hover: #db9d38;
+  /* Cores Base - Premium Navy & Gold */
+  --primary-color: #0B192C; /* Navy profundo */
+  --primary-light: #1A365D; /* Navy intermediário */
+  --secondary-color: #D4AF37; /* Dourado Premium */
+  --secondary-hover: #F3E5AB; /* Dourado/Areia claro */
   
   /* Cores de Texto */
-  --text-dark: #1a1a1a;
-  --text-light: #f5f5f5;
-  --text-muted: #666666;
+  --text-dark: #1F2937;
+  --text-light: #F9FAFB;
+  --text-muted: #6B7280;
   
   /* Cores de Fundo */
-  --bg-light: #f9fbfb;
-  --bg-white: #ffffff;
-  --bg-dark: #1e1e1e;
+  --bg-light: #F3F4F6;
+  --bg-white: #FFFFFF;
+  --bg-dark: #111827;
   
   /* Tipografia */
   --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-title: 'Outfit', 'Inter', system-ui, sans-serif; /* Fonte de destaque para títulos */
   
   /* Espaçamento */
-  --section-padding: 5rem 10%;
+  --section-padding: 6rem 10%;
   --section-padding-mobile: 4rem 5%;
   
   /* Bordas e Sombras */
-  --radius-md: 8px;
-  --radius-lg: 16px;
-  --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
-  --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.05);
+  --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.1);
+  --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.15);
+  --shadow-gold: 0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+/* Animações Globais */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
 }
 
 * {
@@ -48,6 +68,7 @@ body {
 }
 
 h1, h2, h3, h4 {
+  font-family: var(--font-title);
   line-height: 1.2;
   margin-bottom: 1rem;
 }
