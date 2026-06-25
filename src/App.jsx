@@ -5,6 +5,7 @@ import { SpecialtiesSection } from './components/SpecialtiesSection/SpecialtiesS
 import { ServicesSection } from './components/ServicesSection/ServicesSection';
 import { PurposeSection } from './components/PurposeSection/PurposeSection';
 import { FAQSection } from './components/FAQSection/FAQSection';
+import { LocationSection } from './components/LocationSection/LocationSection';
 import { Footer } from './components/Footer/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp/FloatingWhatsApp';
 
@@ -18,6 +19,7 @@ function App() {
         <ServicesSection />
         <PurposeSection />
         <FAQSection />
+        <LocationSection />
       </main>
       <Footer />
       <FloatingWhatsApp />
