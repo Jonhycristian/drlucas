@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './ServicesSection.module.css';
-import { Home, AlertCircle, TestTube, Apple, Briefcase } from 'lucide-react';
+import { Home, AlertCircle, TestTube, Apple, Briefcase, Syringe } from 'lucide-react';
 
 export function ServicesSection() {
   const services = [
@@ -28,6 +28,11 @@ export function ServicesSection() {
       icon: <Briefcase size={32} />,
       title: 'Assistência Técnica',
       description: 'Consultoria especializada para produtores rurais, otimizando resultados na fazenda.'
+    },
+    {
+      icon: <Syringe size={32} />,
+      title: 'Vacinação e Profilaxia',
+      description: 'Protocolos vacinais e controle de parasitas personalizados para manter seu animal sempre protegido e saudável.'
     }
   ];
 
