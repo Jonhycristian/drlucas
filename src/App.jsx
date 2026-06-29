@@ -6,10 +6,13 @@ import { AboutSection } from './components/AboutSection/AboutSection';
 import { SpecialtiesSection } from './components/SpecialtiesSection/SpecialtiesSection';
 import { ServicesSection } from './components/ServicesSection/ServicesSection';
 import { PurposeSection } from './components/PurposeSection/PurposeSection';
+import { TestimonialsSection } from './components/TestimonialsSection/TestimonialsSection';
+import { GallerySection } from './components/GallerySection/GallerySection';
 import { FAQSection } from './components/FAQSection/FAQSection';
 import { LocationSection } from './components/LocationSection/LocationSection';
 import { Footer } from './components/Footer/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp/FloatingWhatsApp';
+import { ScrollReveal } from './components/ScrollReveal/ScrollReveal';
 
 function App() {
   return (
@@ -17,13 +20,15 @@ function App() {
       <Header />
       <main>
         <HeroSection />
-        <AnimalsSection />
-        <AboutSection />
-        <SpecialtiesSection />
-        <ServicesSection />
-        <PurposeSection />
-        <FAQSection />
-        <LocationSection />
+        <ScrollReveal><AnimalsSection /></ScrollReveal>
+        <ScrollReveal><AboutSection /></ScrollReveal>
+        <ScrollReveal><SpecialtiesSection /></ScrollReveal>
+        <ScrollReveal><ServicesSection /></ScrollReveal>
+        <ScrollReveal><PurposeSection /></ScrollReveal>
+        <ScrollReveal><TestimonialsSection /></ScrollReveal>
+        <ScrollReveal><GallerySection /></ScrollReveal>
+        <ScrollReveal><FAQSection /></ScrollReveal>
+        <ScrollReveal><LocationSection /></ScrollReveal>
       </main>
       <Footer />
       <FloatingWhatsApp />
