@@ -6,7 +6,7 @@
 
 .container {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1.5fr 1fr;
   gap: 3rem;
   margin-bottom: 3rem;
 }
@@ -30,19 +30,19 @@
   max-width: 400px;
 }
 
-.links h4, .social h4 {
+.links h4, .navLinks h4, .social h4 {
   color: var(--bg-white);
   margin-bottom: 1.5rem;
   font-size: 1.2rem;
 }
 
-.links ul {
+.links ul, .navLinks ul {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.links li {
+.links li, .navLinks li {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -50,7 +50,7 @@
   transition: color 0.3s ease;
 }
 
-.links a:hover {
+.links a:hover, .navLinks a:hover {
   color: var(--secondary-color);
 }
 
@@ -61,6 +61,13 @@
 .socialIcons {
   display: flex;
   gap: 1rem;
+}
+
+.socialText {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
 }
 
 .socialLink {

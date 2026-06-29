@@ -17,6 +17,17 @@ export function Footer() {
           </p>
         </div>
         
+        <div className={styles.navLinks}>
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#sobre">Sobre o Doutor</a></li>
+            <li><a href="#especialidades">Especialidades</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+          </ul>
+        </div>
+        
         <div className={styles.links}>
           <h4>Atendimento</h4>
           <ul>
@@ -30,17 +41,21 @@ export function Footer() {
                 (35) 99848-3732
               </a>
             </li>
+            <li>
+              <Mail size={18} className={styles.icon} />
+              <a href="mailto:contato@drlucasvet.com.br">
+                contato@drlucasvet.com.br
+              </a>
+            </li>
           </ul>
         </div>
         
         <div className={styles.social}>
           <h4>Redes Sociais</h4>
+          <p className={styles.socialText}>Acompanhe nosso dia a dia no Instagram:</p>
           <div className={styles.socialIcons}>
-            <a href="#" className={styles.socialLink} aria-label="Instagram">
+            <a href="https://instagram.com/drlucasvet" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="Instagram">
               <AtSign size={24} />
-            </a>
-            <a href="#" className={styles.socialLink} aria-label="Email">
-              <Mail size={24} />
             </a>
           </div>
         </div>
