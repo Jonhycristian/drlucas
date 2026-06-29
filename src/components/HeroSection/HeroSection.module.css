@@ -5,7 +5,7 @@
   overflow: hidden;
   display: flex;
   align-items: center;
-  background-image: url('/cachorro.png');
+  background-image: url('/fundo.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
