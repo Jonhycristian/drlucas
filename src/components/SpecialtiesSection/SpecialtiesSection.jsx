@@ -43,6 +43,17 @@ export function SpecialtiesSection() {
                   <span>Nutrição clínica especializada</span>
                 </div>
               </div>
+
+              <div className={styles.animalDescriptions}>
+                <div className={styles.descBlock}>
+                  <h4>Felinos</h4>
+                  <p>Atenção especializada aos detalhes sutis da saúde felina. Cuidado focado em minimizar o estresse e proporcionar um ambiente seguro para o seu gato, com medicina preventiva e tratamentos modernos.</p>
+                </div>
+                <div className={styles.descBlock}>
+                  <h4>Caninos</h4>
+                  <p>Companheiros leais merecem a melhor qualidade de vida. Oferecemos acompanhamento completo, desde vacinação e nutrição até tratamentos complexos, garantindo a vitalidade e a alegria do seu cãozinho.</p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -80,6 +91,13 @@ export function SpecialtiesSection() {
                 <div className={styles.featureChip}>
                   <CheckCircle2 className={styles.check} size={18} />
                   <span>Atendimento emergencial a campo</span>
+                </div>
+              </div>
+
+              <div className={styles.animalDescriptions}>
+                <div className={styles.descBlock}>
+                  <h4>Equinos</h4>
+                  <p>Medicina esportiva e preventiva para grandes animais. Foco no desempenho, bem-estar e longevidade do seu cavalo, com atendimento a campo e diagnósticos precisos para garantir a máxima performance.</p>
                 </div>
               </div>
             </div>

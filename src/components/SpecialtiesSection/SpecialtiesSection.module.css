@@ -177,6 +177,27 @@
   transform: scale(1.1);
 }
 
+.animalDescriptions {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+}
+
+.descBlock h4 {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.descBlock p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 @media (max-width: 992px) {
   .cardRow, .cardRowReverse {
     flex-direction: column;
