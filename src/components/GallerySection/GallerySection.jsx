@@ -18,14 +18,6 @@ export function GallerySection() {
     {
       src: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=800&auto=format&fit=crop",
       alt: "Consultório"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=800&auto=format&fit=crop",
-      alt: "Carinho com Pets"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?q=80&w=800&auto=format&fit=crop",
-      alt: "Equinos"
     }
   ];
 
