@@ -27,7 +27,7 @@ export function Header() {
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.container}`}>
         <a href="#inicio" className={styles.logo} onClick={closeMobileMenu}>
-          Dr. Lucas
+          <img src="/logo01-semfundo.png" alt="Dr. Lucas Logo" className={styles.logoImg} />
         </a>
 
         {/* Desktop Navigation */}

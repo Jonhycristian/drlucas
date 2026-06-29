@@ -1,6 +1,7 @@
 import React from 'react';
 import { Header } from './components/Header/Header';
 import { HeroSection } from './components/HeroSection/HeroSection';
+import { AnimalsSection } from './components/AnimalsSection/AnimalsSection';
 import { AboutSection } from './components/AboutSection/AboutSection';
 import { SpecialtiesSection } from './components/SpecialtiesSection/SpecialtiesSection';
 import { ServicesSection } from './components/ServicesSection/ServicesSection';
@@ -16,6 +17,7 @@ function App() {
       <Header />
       <main>
         <HeroSection />
+        <AnimalsSection />
         <AboutSection />
         <SpecialtiesSection />
         <ServicesSection />

@@ -10,7 +10,7 @@ export function Footer() {
     <footer className={styles.footer}>
       <div className={`container ${styles.container}`}>
         <div className={styles.brand}>
-          <h3 className={styles.logo}>Dr. Lucas Lanzellotti</h3>
+          <img src="/logo-completa.png" alt="Dr. Lucas Lanzellotti Logo" className={styles.logoImg} />
           <p className={styles.crmv}>Médico Veterinário • CRMV-SP 75441</p>
           <p className={styles.bio}>
             Medicina veterinária de excelência para pequenos e grandes animais, unindo cuidado humanizado e rigor científico.

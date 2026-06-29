@@ -11,10 +11,10 @@
   margin-bottom: 3rem;
 }
 
-.logo {
-  font-size: 1.5rem;
-  color: var(--bg-white);
-  margin-bottom: 0.25rem;
+.logoImg {
+  max-width: 250px;
+  height: auto;
+  margin-bottom: 1rem;
 }
 
 .crmv {
