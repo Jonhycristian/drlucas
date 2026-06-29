@@ -30,7 +30,6 @@
   flex: 1;
   position: relative;
   min-height: 400px;
-  background: rgba(255, 255, 255, 0.05);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,13 +39,10 @@
 .imageCircle {
   width: 250px;
   height: 250px;
-  border-radius: 50%;
-  background: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02));
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   
   opacity: 0;
   transform: scale(0.5) translateY(50px);
