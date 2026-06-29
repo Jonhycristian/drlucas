@@ -10,6 +10,8 @@
   background-position: center;
   background-attachment: fixed;
   background-color: var(--bg-dark); /* Fallback para caso o png tenha transparência */
+  padding-top: 85px; /* Compensa o espaço do header fixo */
+  box-sizing: border-box;
 }
 
 .overlay {
