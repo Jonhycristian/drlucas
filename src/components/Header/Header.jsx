@@ -6,9 +6,16 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const [scrollProgress, setScrollProgress] = useState(0);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
+      
+      const totalScroll = document.documentElement.scrollTop;
+      const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scroll = `${totalScroll / windowHeight}`;
+      setScrollProgress(scroll);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -25,6 +32,10 @@ export function Header() {
 
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
+      <div 
+        className={styles.scrollProgress} 
+        style={{ transform: `scaleX(${scrollProgress})` }}
+      ></div>
       <div className={`container ${styles.container}`}>
         <a href="#inicio" className={styles.logo} onClick={closeMobileMenu}>
           <img src="/logo01.png" alt="Logo 1" className={styles.logoImg} />

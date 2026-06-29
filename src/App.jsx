@@ -1,7 +1,6 @@
 import React from 'react';
 import { Header } from './components/Header/Header';
 import { HeroSection } from './components/HeroSection/HeroSection';
-import { AnimalsSection } from './components/AnimalsSection/AnimalsSection';
 import { AboutSection } from './components/AboutSection/AboutSection';
 import { SpecialtiesSection } from './components/SpecialtiesSection/SpecialtiesSection';
 import { ServicesSection } from './components/ServicesSection/ServicesSection';
@@ -22,7 +21,6 @@ function App() {
         <HeroSection />
         <ScrollReveal><AboutSection /></ScrollReveal>
         <ScrollReveal><SpecialtiesSection /></ScrollReveal>
-        <ScrollReveal><AnimalsSection /></ScrollReveal>
         <ScrollReveal><ServicesSection /></ScrollReveal>
         <ScrollReveal><PurposeSection /></ScrollReveal>
         <ScrollReveal><TestimonialsSection /></ScrollReveal>

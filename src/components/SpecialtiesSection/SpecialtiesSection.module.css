@@ -3,72 +3,106 @@
 }
 
 .cardsContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }
 
 .card {
-  position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-  min-height: 520px;
   color: var(--bg-white);
+  background: linear-gradient(135deg, rgba(11, 25, 44, 0.9) 0%, rgba(11, 25, 44, 1) 100%);
+  display: flex;
 }
 
-.cardBackground {
+.cardRow {
+  flex-direction: row;
+}
+
+.cardRowReverse {
+  flex-direction: row-reverse;
+}
+
+.animalVisuals {
+  flex: 1;
+  position: relative;
+  min-height: 400px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.imageCircle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02));
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.8s ease;
-  z-index: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.cardPets {
-  background-image: url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=2069&auto=format&fit=crop'); /* Cães/Gatos sorridentes */
+.circleCat {
+  top: 10%;
+  left: 10%;
+  z-index: 2;
 }
 
-.cardLarge {
-  background-image: url('https://images.unsplash.com/photo-1599422204732-73a7638d15a5?q=80&w=1974&auto=format&fit=crop'); /* Gado/Fazenda premium */
-}
-
-.cardOverlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(to bottom, rgba(11, 25, 44, 0.4) 0%, rgba(11, 25, 44, 0.98) 100%);
+.circleDog {
+  bottom: 10%;
+  right: 10%;
+  width: 200px;
+  height: 200px;
   z-index: 1;
-  transition: background 0.5s ease;
+}
+
+.circleHorse {
+  width: 300px;
+  height: 300px;
+  z-index: 2;
+}
+
+.animalImage {
+  width: 130%;
+  max-width: 130%;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
+}
+
+.floatAnim {
+  animation: float 4s ease-in-out infinite;
+}
+
+.floatAnimDelay {
+  animation: float 4.5s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.floatAnimHorse {
+  animation: float 5s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-15px) rotate(2deg); }
+  66% { transform: translateY(-5px) rotate(-2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
 }
 
 .cardContent {
-  position: relative;
-  z-index: 2;
+  flex: 1;
   padding: 3.5rem 2.5rem;
-  height: 100%;
   display: flex;
   flex-direction: column;
 }
-
-.card:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
-}
-
-.card:hover .cardBackground {
-  transform: scale(1.1);
-}
-
-.card:hover .cardOverlay {
-  background: linear-gradient(to bottom, rgba(11, 25, 44, 0.6) 0%, rgba(11, 25, 44, 0.95) 100%);
-}
-
-.cardHeader {
   text-align: center;
   margin-bottom: 2.5rem;
   padding-bottom: 2rem;
@@ -144,13 +178,25 @@
 }
 
 @media (max-width: 992px) {
-  .cardsContainer {
-    grid-template-columns: 1fr;
+  .cardRow, .cardRowReverse {
+    flex-direction: column;
   }
-  .card {
-    min-height: auto;
+  .animalVisuals {
+    min-height: 350px;
+  }
+  .imageCircle {
+    width: 200px;
+    height: 200px;
+  }
+  .circleDog {
+    width: 150px;
+    height: 150px;
+  }
+  .circleHorse {
+    width: 250px;
+    height: 250px;
   }
   .cardContent {
-    padding: 3rem 2rem;
+    padding: 3rem 1.5rem;
   }
 }

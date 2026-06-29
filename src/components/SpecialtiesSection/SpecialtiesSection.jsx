@@ -10,9 +10,16 @@ export function SpecialtiesSection() {
         
         <div className={styles.cardsContainer}>
           {/* Card Pets */}
-          <div className={styles.card}>
-            <div className={`${styles.cardBackground} ${styles.cardPets}`}></div>
-            <div className={styles.cardOverlay}></div>
+          <div className={`${styles.card} ${styles.cardRow}`}>
+            <div className={styles.animalVisuals}>
+              <div className={`${styles.imageCircle} ${styles.circleCat}`}>
+                <img src="/Gato.png" alt="Gato" className={`${styles.animalImage} ${styles.floatAnim}`} />
+              </div>
+              <div className={`${styles.imageCircle} ${styles.circleDog}`}>
+                <img src="/cachorro.png" alt="Cachorro" className={`${styles.animalImage} ${styles.floatAnimDelay}`} />
+              </div>
+            </div>
+            
             <div className={styles.cardContent}>
               <div className={styles.cardHeader}>
                 <div className={styles.iconGroup}>
@@ -40,9 +47,13 @@ export function SpecialtiesSection() {
           </div>
 
           {/* Card Grandes Animais */}
-          <div className={styles.card}>
-            <div className={`${styles.cardBackground} ${styles.cardLarge}`}></div>
-            <div className={styles.cardOverlay}></div>
+          <div className={`${styles.card} ${styles.cardRowReverse}`}>
+            <div className={styles.animalVisuals}>
+              <div className={`${styles.imageCircle} ${styles.circleHorse}`}>
+                <img src="/cavalo.png" alt="Cavalo" className={`${styles.animalImage} ${styles.floatAnimHorse}`} />
+              </div>
+            </div>
+
             <div className={styles.cardContent}>
               <div className={styles.cardHeader}>
                 <div className={styles.iconGroup}>

@@ -37,25 +37,49 @@
   object-fit: contain;
 }
 
+.scrollProgress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #FFD700, var(--secondary-color), #25D366);
+  transform-origin: left;
+  z-index: 101;
+}
+
 .desktopNav {
   display: flex;
   gap: 2rem;
 }
 
 .desktopNav a {
+  position: relative;
   color: var(--text-dark, #333);
   font-weight: 600;
   font-size: 1rem;
   transition: all 0.3s ease;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+  padding: 0.5rem 0.2rem;
+}
+
+.desktopNav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--secondary-color);
+  transition: width 0.3s ease;
+  border-radius: 2px;
 }
 
 .desktopNav a:hover {
   color: var(--primary-color, #0a4d68);
-  background-color: var(--bg-light, #f8f9fa);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
+}
+
+.desktopNav a:hover::after {
+  width: 100%;
 }
 
 .mobileMenuBtn {
