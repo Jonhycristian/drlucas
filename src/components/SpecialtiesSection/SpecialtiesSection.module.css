@@ -216,19 +216,39 @@
     flex-direction: column;
   }
   .animalVisuals {
-    min-height: 350px;
+    min-height: 250px;
   }
   .imageCircle {
-    width: 200px;
-    height: 200px;
-  }
-  .circleDog {
     width: 150px;
     height: 150px;
+    position: relative;
+    transform: none;
+    margin: 0 auto;
+  }
+  
+  .animalVisuals {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circleCat, .circleDog, .circleHorse {
+    position: relative;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    right: auto;
+  }
+  
+  .circleDog {
+    width: 130px;
+    height: 130px;
   }
   .circleHorse {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
   }
   .cardContent {
     padding: 3rem 1.5rem;

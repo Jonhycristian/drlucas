@@ -103,42 +103,84 @@
     display: block;
   }
 
-  .mobileNav {
-    display: block;
-    position: absolute;
-    top: calc(100% + 10px);
-    left: 5%;
-    width: 90%;
-    background-color: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  .mobileOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 101;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .mobileOverlayOpen {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobileNavHeader {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 1rem;
+  }
+
+  .closeMenuBtn {
+    background: none;
     border: none;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
+    color: var(--text-dark);
+    cursor: pointer;
+  }
+
+  .mobileNav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 102;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobileNavOpen {
+    right: 0;
   }
 
   .mobileNavLinks {
     display: flex;
     flex-direction: column;
+    padding: 0 1.5rem;
   }
 
   .mobileNavLinks a {
     color: var(--text-dark, #333);
-    padding: 1.2rem 1.5rem;
-    font-size: 1.1rem;
+    padding: 1.25rem 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    transition: all 0.2s;
+    transition: all 0.3s;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
   }
 
   .mobileNavLinks a:last-child {
-    border-bottom: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   }
 
   .mobileNavLinks a:hover {
-    background-color: var(--bg-light, #f8f9fa);
+    background-color: rgba(10, 77, 104, 0.05);
     color: var(--primary-color, #0a4d68);
-    box-shadow: inset 4px 0 0 var(--primary-color, #0a4d68);
+    transform: translateX(5px);
   }
 }

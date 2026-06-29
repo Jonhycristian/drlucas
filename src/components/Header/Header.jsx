@@ -59,18 +59,25 @@ export function Header() {
       </div>
 
       {/* Mobile Navigation Dropdown */}
-      {isMobileMenuOpen && (
-        <div className={styles.mobileNav}>
-          <nav className={styles.mobileNavLinks}>
-            <a href="#inicio" onClick={closeMobileMenu}>Início</a>
-            <a href="#sobre" onClick={closeMobileMenu}>Sobre</a>
-            <a href="#especialidades" onClick={closeMobileMenu}>Especialidades</a>
-            <a href="#proposito" onClick={closeMobileMenu}>Propósito</a>
-            <a href="#duvidas" onClick={closeMobileMenu}>Dúvidas</a>
-            <a href="#localizacao" onClick={closeMobileMenu}>Localização</a>
-          </nav>
+      <div 
+        className={`${styles.mobileOverlay} ${isMobileMenuOpen ? styles.mobileOverlayOpen : ''}`}
+        onClick={closeMobileMenu}
+      ></div>
+      <div className={`${styles.mobileNav} ${isMobileMenuOpen ? styles.mobileNavOpen : ''}`}>
+        <div className={styles.mobileNavHeader}>
+          <button className={styles.closeMenuBtn} onClick={closeMobileMenu} aria-label="Fechar">
+            <X size={28} />
+          </button>
         </div>
-      )}
+        <nav className={styles.mobileNavLinks}>
+          <a href="#inicio" onClick={closeMobileMenu}>Início</a>
+          <a href="#sobre" onClick={closeMobileMenu}>Sobre</a>
+          <a href="#especialidades" onClick={closeMobileMenu}>Especialidades</a>
+          <a href="#proposito" onClick={closeMobileMenu}>Propósito</a>
+          <a href="#duvidas" onClick={closeMobileMenu}>Dúvidas</a>
+          <a href="#localizacao" onClick={closeMobileMenu}>Localização</a>
+        </nav>
+      </div>
     </header>
   );
 }
