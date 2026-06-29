@@ -12,12 +12,22 @@
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  min-height: 500px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  min-height: 520px;
+  color: var(--bg-white);
+}
+
+.cardBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
-  color: var(--bg-white);
+  transition: transform 0.8s ease;
+  z-index: 0;
 }
 
 .cardPets {
@@ -31,8 +41,9 @@
 .cardOverlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(to bottom, rgba(11, 25, 44, 0.7) 0%, rgba(11, 25, 44, 0.95) 100%);
+  background: linear-gradient(to bottom, rgba(11, 25, 44, 0.4) 0%, rgba(11, 25, 44, 0.98) 100%);
   z-index: 1;
+  transition: background 0.5s ease;
 }
 
 .cardContent {
@@ -45,8 +56,16 @@
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-15px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover .cardBackground {
+  transform: scale(1.1);
+}
+
+.card:hover .cardOverlay {
+  background: linear-gradient(to bottom, rgba(11, 25, 44, 0.6) 0%, rgba(11, 25, 44, 0.95) 100%);
 }
 
 .cardHeader {
@@ -62,6 +81,12 @@
   gap: 1.5rem;
   color: var(--secondary-color);
   margin-bottom: 1.5rem;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .iconGroup {
+  transform: scale(1.1);
+  color: #FFD700;
 }
 
 .cardHeader h3 {
@@ -90,12 +115,26 @@
   font-size: 1.05rem;
   color: var(--text-light);
   line-height: 1.6;
+  transition: transform 0.3s ease, color 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.list li:hover {
+  transform: translateX(10px);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
 }
 
 .check {
   color: var(--secondary-color);
   flex-shrink: 0;
-  margin-top: 2px;
+  margin-top: 3px;
+  transition: color 0.3s ease;
+}
+
+.list li:hover .check {
+  color: #FFD700;
 }
 
 .list li strong {
