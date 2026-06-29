@@ -1,8 +1,11 @@
 import React from 'react';
 import styles from './SpecialtiesSection.module.css';
 import { Dog, Cat, Tractor, Tent, CheckCircle2 } from 'lucide-react';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 
 export function SpecialtiesSection() {
+  const { ref: petsRef, isVisible: petsVisible } = useScrollReveal();
+  const { ref: horseRef, isVisible: horseVisible } = useScrollReveal();
   return (
     <section className={styles.specialties} id="especialidades">
       <div className="container">
@@ -11,11 +14,11 @@ export function SpecialtiesSection() {
         <div className={styles.cardsContainer}>
           {/* Card Pets */}
           <div className={`${styles.card} ${styles.cardRow}`}>
-            <div className={styles.animalVisuals}>
-              <div className={`${styles.imageCircle} ${styles.circleCat}`}>
+            <div className={styles.animalVisuals} ref={petsRef}>
+              <div className={`${styles.imageCircle} ${styles.circleCat} ${petsVisible ? styles.animateIn : ''}`}>
                 <img src="/Gato.png" alt="Gato" className={`${styles.animalImage} ${styles.floatAnim}`} />
               </div>
-              <div className={`${styles.imageCircle} ${styles.circleDog}`}>
+              <div className={`${styles.imageCircle} ${styles.circleDog} ${petsVisible ? styles.animateInDelay : ''}`}>
                 <img src="/cachorro.png" alt="Cachorro" className={`${styles.animalImage} ${styles.floatAnimDelay}`} />
               </div>
             </div>
@@ -59,8 +62,8 @@ export function SpecialtiesSection() {
 
           {/* Card Grandes Animais */}
           <div className={`${styles.card} ${styles.cardRowReverse}`}>
-            <div className={styles.animalVisuals}>
-              <div className={`${styles.imageCircle} ${styles.circleHorse}`}>
+            <div className={styles.animalVisuals} ref={horseRef}>
+              <div className={`${styles.imageCircle} ${styles.circleHorse} ${horseVisible ? styles.animateIn : ''}`}>
                 <img src="/cavalo.png" alt="Cavalo" className={`${styles.animalImage} ${styles.floatAnimHorse}`} />
               </div>
             </div>
