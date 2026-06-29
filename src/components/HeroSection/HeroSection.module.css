@@ -5,10 +5,11 @@
   overflow: hidden;
   display: flex;
   align-items: center;
-  background-image: url('https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?q=80&w=2070&auto=format&fit=crop');
+  background-image: url('/cachorro.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-color: var(--bg-dark); /* Fallback para caso o png tenha transparência */
 }
 
 .overlay {
