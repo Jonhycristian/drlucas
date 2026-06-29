@@ -6,15 +6,17 @@
   z-index: 100;
   transition: all 0.3s ease;
   padding: 1.5rem 0;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .scrolled {
-  background-color: rgba(11, 25, 44, 0.95);
+  background-color: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   padding: 1rem 0;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  border-bottom: none;
 }
 
 .container {
@@ -41,21 +43,26 @@
 }
 
 .desktopNav a {
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 500;
-  font-size: 0.95rem;
-  transition: color 0.3s ease;
+  color: var(--text-dark, #333);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
 }
 
 .desktopNav a:hover {
-  color: var(--secondary-color);
+  color: var(--primary-color, #0a4d68);
+  background-color: var(--bg-light, #f8f9fa);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
 }
 
 .mobileMenuBtn {
   display: none;
   background: none;
   border: none;
-  color: var(--bg-white);
+  color: var(--text-dark, #333);
   cursor: pointer;
 }
 
@@ -78,11 +85,11 @@
     top: calc(100% + 10px);
     left: 5%;
     width: 90%;
-    background-color: rgba(11, 25, 44, 0.95);
+    background-color: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border: none;
     border-radius: var(--radius-lg);
     overflow: hidden;
   }
@@ -93,12 +100,12 @@
   }
 
   .mobileNavLinks a {
-    color: var(--bg-white);
+    color: var(--text-dark, #333);
     padding: 1.2rem 1.5rem;
     font-size: 1.1rem;
-    font-weight: 500;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    transition: background-color 0.2s;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.2s;
   }
 
   .mobileNavLinks a:last-child {
@@ -106,7 +113,8 @@
   }
 
   .mobileNavLinks a:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-    color: var(--secondary-color);
+    background-color: var(--bg-light, #f8f9fa);
+    color: var(--primary-color, #0a4d68);
+    box-shadow: inset 4px 0 0 var(--primary-color, #0a4d68);
   }
 }
