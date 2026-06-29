@@ -20,9 +20,9 @@ function App() {
       <Header />
       <main>
         <HeroSection />
-        <ScrollReveal><AnimalsSection /></ScrollReveal>
         <ScrollReveal><AboutSection /></ScrollReveal>
         <ScrollReveal><SpecialtiesSection /></ScrollReveal>
+        <ScrollReveal><AnimalsSection /></ScrollReveal>
         <ScrollReveal><ServicesSection /></ScrollReveal>
         <ScrollReveal><PurposeSection /></ScrollReveal>
         <ScrollReveal><TestimonialsSection /></ScrollReveal>
