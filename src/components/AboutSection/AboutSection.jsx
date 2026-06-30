@@ -10,7 +10,7 @@ export function AboutSection() {
           <div className={styles.imageWrapper}>
             <div className={styles.backdropDecoration}></div>
             <img 
-              src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1964&auto=format&fit=crop" 
+              src="/dr-lucas.jpeg" 
               alt="Dr. Lucas Lanzellotti" 
               className={styles.image}
             />
