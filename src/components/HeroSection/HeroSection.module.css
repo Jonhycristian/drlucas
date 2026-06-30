@@ -145,6 +145,7 @@
   .hero {
     height: 100dvh;
     padding-top: 60px;
+    background-position: 75% center;
   }
   .glassCard {
     padding: 1.5rem;
