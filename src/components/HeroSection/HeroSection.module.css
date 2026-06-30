@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -11,6 +11,7 @@
   background-attachment: fixed;
   background-color: var(--bg-dark); /* Fallback para caso o png tenha transparência */
   padding-top: 85px; /* Compensa o espaço do header fixo */
+  padding-bottom: 40px;
   box-sizing: border-box;
 }
 
@@ -143,8 +144,9 @@
 
 @media (max-width: 768px) {
   .hero {
-    height: 100dvh;
+    min-height: 100dvh;
     padding-top: 60px;
+    padding-bottom: 40px;
     background-position: 75% center;
   }
   .glassCard {
