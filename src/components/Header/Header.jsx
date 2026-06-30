@@ -38,10 +38,8 @@ export function Header() {
       ></div>
       <div className={`container ${styles.container}`}>
         <a href="#inicio" className={styles.logo} onClick={closeMobileMenu}>
-          <div className={styles.logoContainer}>
-            <img src="/logo01.jpeg" alt="Logo 1" className={styles.logoImg} />
-            <img src="/logo02.jpeg" alt="Logo 2" className={styles.logoImg} />
-          </div>
+          <img src="/logo01.jpeg" alt="Logo 1" className={styles.logoImg} />
+          <img src="/logo02.jpeg" alt="Logo 2" className={styles.logoImg} />
         </a>
 
         {/* Desktop Navigation */}
