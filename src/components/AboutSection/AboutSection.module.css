@@ -95,7 +95,7 @@
 
 .title {
   font-size: 2.5rem;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   margin-bottom: 0.75rem;
 }
 
@@ -166,7 +166,7 @@
 .featureInfo h4 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .featureInfo p {
@@ -183,7 +183,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-weight: 600;
   font-size: 1.1rem;
   transition: color 0.3s ease;

@@ -148,7 +148,7 @@ section {
 .section-title {
   text-align: center;
   font-size: 2.5rem;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   margin-bottom: 3rem;
 }
 
