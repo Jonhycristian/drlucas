@@ -14,8 +14,15 @@
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   color: var(--bg-white);
-  background: linear-gradient(135deg, rgba(11, 25, 44, 0.9) 0%, rgba(11, 25, 44, 1) 100%);
+  background: linear-gradient(135deg, rgba(11, 25, 44, 0.95) 0%, rgba(11, 25, 44, 1) 100%);
   display: flex;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px rgba(11, 25, 44, 0.3);
+  border-color: rgba(255, 255, 255, 0.15);
 }
 
 .cardRow {
@@ -45,25 +52,18 @@
   position: absolute;
   
   opacity: 0;
-  transform: scale(0.5) translateY(50px);
-  transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.animateIn {
-  opacity: 1;
-  transform: scale(1) translateY(0);
-}
-
-.animateInDelay {
-  opacity: 1;
-  transform: scale(1) translateY(0);
-  transition-delay: 0.3s;
+  transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .circleCat {
   top: 10%;
   left: 10%;
   z-index: 2;
+  transform: translateX(-100px) scale(0.8) rotate(-5deg);
+}
+.circleCat.animateIn {
+  opacity: 1;
+  transform: translateX(0) scale(1) rotate(0);
 }
 
 .circleDog {
@@ -72,12 +72,23 @@
   width: 200px;
   height: 200px;
   z-index: 1;
+  transform: translateX(100px) scale(0.8) rotate(5deg);
+}
+.circleDog.animateInDelay {
+  opacity: 1;
+  transform: translateX(0) scale(1) rotate(0);
+  transition-delay: 0.3s;
 }
 
 .circleHorse {
   width: 300px;
   height: 300px;
   z-index: 2;
+  transform: translateY(100px) scale(0.8);
+}
+.circleHorse.animateIn {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 .animalImage {
@@ -199,10 +210,26 @@
   padding-top: 2rem;
 }
 
+.descBlock {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+}
+
+.descBlock:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  transform: translateX(5px);
+}
+
 .descBlock h4 {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   color: var(--secondary-color);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .descBlock p {
@@ -222,8 +249,14 @@
     width: 150px;
     height: 150px;
     position: relative;
-    transform: none;
     margin: 0 auto;
+    transform: translateY(50px) scale(0.8);
+  }
+  
+  .circleCat.animateIn, 
+  .circleDog.animateInDelay, 
+  .circleHorse.animateIn {
+    transform: translateY(0) scale(1);
   }
   
   .animalVisuals {
