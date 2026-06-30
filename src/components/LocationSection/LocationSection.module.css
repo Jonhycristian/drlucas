@@ -1,6 +1,6 @@
 .location {
   background-color: var(--bg-white);
-  padding: 6rem 0;
+  padding: 4rem 0;
 }
 
 .container {
@@ -37,7 +37,7 @@
   overflow: hidden;
   box-shadow: var(--shadow-md);
   border: 1px solid rgba(0,0,0,0.05);
-  height: 450px;
+  height: 300px;
 }
 
 .map {
@@ -48,10 +48,10 @@
 
 @media (max-width: 768px) {
   .location {
-    padding: 4rem 0;
+    padding: 3rem 0;
   }
   .mapContainer {
-    height: 300px;
+    height: 250px;
   }
   .subtitle {
     font-size: 1rem;

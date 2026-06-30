@@ -26,7 +26,6 @@ export function HeroSection() {
           </p>
           
           <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className={styles.ctaBtn}>
-            <Phone size={22} className={styles.icon} />
             Agendar Consulta
           </a>
         </div>

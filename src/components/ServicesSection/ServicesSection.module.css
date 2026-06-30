@@ -6,9 +6,9 @@
 .subtitle {
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
-  font-size: 1.2rem;
-  margin-top: -2rem;
-  margin-bottom: 3rem;
+  font-size: 1.15rem;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
 }
 
 .grid {
@@ -21,7 +21,7 @@
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-md);
-  padding: 2.5rem 2rem;
+  padding: 1.5rem;
   transition: all 0.3s ease;
 }
 
