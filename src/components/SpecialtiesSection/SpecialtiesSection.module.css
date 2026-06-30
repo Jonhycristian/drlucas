@@ -29,7 +29,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
 }
 
 .imageCircle {
@@ -45,8 +44,8 @@
 }
 
 .circleCat {
-  top: 10%;
-  left: 10%;
+  top: 5%;
+  left: 15%;
   z-index: 2;
   transform: translateX(-100px) scale(0.8) rotate(-5deg);
 }
@@ -56,8 +55,8 @@
 }
 
 .circleDog {
-  bottom: 10%;
-  right: 10%;
+  bottom: 5%;
+  right: 15%;
   width: 200px;
   height: 200px;
   z-index: 1;
@@ -81,10 +80,10 @@
 }
 
 .animalImage {
-  width: 130%;
-  max-width: 130%;
+  width: 140%;
+  max-width: 140%;
   object-fit: contain;
-  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
+  filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15));
 }
 
 .floatAnim {
