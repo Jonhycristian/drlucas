@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Footer.module.css';
-import { Phone, MapPin, Instagram, Mail } from 'lucide-react';
+import { Phone, MapPin, Mail } from 'lucide-react';
 
 export function Footer() {
   const whatsappNumber = "5535998483732";
@@ -54,8 +54,8 @@ export function Footer() {
           <h4>Redes Sociais</h4>
           <p className={styles.socialText}>Acompanhe nosso dia a dia no Instagram:</p>
           <div className={styles.socialIcons}>
-            <a href="https://www.instagram.com/p/DSfGdecDWOp/?igsh=MXI1ZGVjamsxc3g4Mw==" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="Instagram">
-              <Instagram size={24} />
+            <a href="https://www.instagram.com/mv.lucaslanzellotti?igsh=MWxiaTFoMTIwZW90cQ==" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="Instagram">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Original" width="28" height="28" />
             </a>
           </div>
         </div>

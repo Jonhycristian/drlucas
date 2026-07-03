@@ -4,7 +4,7 @@ import styles from './GallerySection.module.css';
 export function GallerySection() {
   const images = [
     {
-      src: "https://images.unsplash.com/photo-1599422204732-73a7638d15a5?q=80&w=800&auto=format&fit=crop",
+      src: "/dr-lucas.jpeg",
       alt: "Atendimento a Campo"
     },
     {
