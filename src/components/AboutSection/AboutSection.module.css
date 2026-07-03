@@ -36,12 +36,11 @@
 .image {
   position: relative;
   width: 100%;
+  height: auto;
   max-height: 480px;
   border-radius: var(--radius-lg);
   z-index: 1;
-  object-fit: cover;
-  object-position: top center;
-  aspect-ratio: 3/4;
+  object-fit: contain;
   box-shadow: var(--shadow-lg);
 }
 
