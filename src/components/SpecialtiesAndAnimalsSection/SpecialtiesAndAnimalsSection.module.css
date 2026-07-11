@@ -203,9 +203,13 @@
 }
 
 @keyframes cardFadeIn {
-  to {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+  }
+  100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 
@@ -247,6 +251,8 @@
 .animalCard:hover .blob {
   transform: translateX(-50%) scale(1.1);
   background-color: var(--primary-color);
+}
+
 @keyframes floatAnimal {
   0% { transform: translateY(0) rotate(0deg); }
   50% { transform: translateY(-18px) rotate(2.5deg); }
