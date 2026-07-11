@@ -43,7 +43,7 @@ export function PurposeSection() {
         
         <div className={styles.imageWrapper}>
           <img 
-            src="/gato completo.png" 
+            src="/atendimento.png" 
             alt="Atendimento Veterinário Premium - Gato" 
             className={styles.image}
           />

@@ -16,7 +16,7 @@ export function GallerySection() {
       alt: "Pet"
     },
     {
-      src: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=800&auto=format&fit=crop",
+      src: "/atendimento.png",
       alt: "Consultório"
     }
   ];
