@@ -19,8 +19,8 @@ export function FAQSection() {
       answer: "Aceitamos pagamentos via PIX, cartões de crédito e débito, e dinheiro. Para planos de acompanhamento contínuo em propriedades rurais, podemos negociar pacotes mensais."
     },
     {
-      question: "O atendimento de emergência funciona 24 horas?",
-      answer: "Sim, ofereço suporte de urgência e emergência mediante disponibilidade. Caso seja uma situação crítica, entre em contato imediatamente pelo WhatsApp ou ligação."
+      question: "Você atende como veterinário 24 horas em Bragança Paulista?",
+      answer: "Sim, ofereço suporte de urgência e emergência veterinária 24 horas em Bragança Paulista e região, mediante disponibilidade. Caso seja uma situação crítica com seu pet ou animal de grande porte, entre em contato imediatamente pelo WhatsApp ou ligação."
     }
   ];
 
