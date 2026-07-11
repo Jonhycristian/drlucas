@@ -247,35 +247,45 @@
 .animalCard:hover .blob {
   transform: translateX(-50%) scale(1.1);
   background-color: var(--primary-color);
-  opacity: 0.15;
+@keyframes floatAnimal {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(1.5deg); }
+  100% { transform: translateY(0) rotate(0deg); }
 }
 
-@keyframes floatAnimal {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+.animalFloatWrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 1;
+  animation: floatAnimal 4s ease-in-out infinite;
+}
+
+.animalCard:nth-child(even) .animalFloatWrapper {
+  animation-duration: 5s;
+  animation-delay: 0.5s;
+}
+
+.animalCard:hover .animalFloatWrapper {
+  animation-play-state: paused;
 }
 
 .fullAnimalImage {
   position: relative;
-  z-index: 1;
   height: 125%; 
   max-width: 110%;
   object-fit: contain;
   filter: drop-shadow(0 15px 15px rgba(0,0,0,0.15));
   transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.5s ease;
-  animation: floatAnimal 5s ease-in-out infinite;
-}
-
-.animalCard:nth-child(even) .fullAnimalImage {
-  animation-duration: 6s;
-  animation-delay: 1s;
 }
 
 .animalCard:hover .fullAnimalImage {
   transform: translateY(-15px) scale(1.08);
   filter: drop-shadow(0 25px 25px rgba(0,0,0,0.25));
-  animation-play-state: paused;
 }
 
 .cardContent {

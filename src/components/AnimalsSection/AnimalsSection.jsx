@@ -87,7 +87,9 @@ export function AnimalsSection() {
             >
               <div className={styles.imageWrapper}>
                 <div className={styles.blob}></div>
-                <img src={animal.image} alt={animal.name} className={styles.fullAnimalImage} />
+                <div className={styles.animalFloatWrapper}>
+                  <img src={animal.image} alt={animal.name} className={styles.fullAnimalImage} />
+                </div>
               </div>
               <div className={styles.cardContent}>
                 <h3>{animal.name}</h3>
