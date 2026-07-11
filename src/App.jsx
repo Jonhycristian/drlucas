@@ -2,8 +2,7 @@ import React from 'react';
 import { Header } from './components/Header/Header';
 import { HeroSection } from './components/HeroSection/HeroSection';
 import { AboutSection } from './components/AboutSection/AboutSection';
-import { SpecialtiesSection } from './components/SpecialtiesSection/SpecialtiesSection';
-import { AnimalsSection } from './components/AnimalsSection/AnimalsSection';
+import { SpecialtiesAndAnimalsSection } from './components/SpecialtiesAndAnimalsSection/SpecialtiesAndAnimalsSection';
 import { ServicesSection } from './components/ServicesSection/ServicesSection';
 import { PurposeSection } from './components/PurposeSection/PurposeSection';
 import { TestimonialsSection } from './components/TestimonialsSection/TestimonialsSection';
@@ -21,8 +20,7 @@ function App() {
       <main>
         <HeroSection />
         <ScrollReveal><AboutSection /></ScrollReveal>
-        <ScrollReveal><SpecialtiesSection /></ScrollReveal>
-        <AnimalsSection />
+        <SpecialtiesAndAnimalsSection />
         <ScrollReveal><ServicesSection /></ScrollReveal>
         <ScrollReveal><PurposeSection /></ScrollReveal>
         <ScrollReveal><TestimonialsSection /></ScrollReveal>
